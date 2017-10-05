@@ -112,7 +112,7 @@ h1{
 .thankCard section{
   font-size: 1.1vw;
   height: 100%;
-  overflow: scroll;
+  overflow: hidden;
   padding: 0px 4px 0px 4px;
   display:block;
   position: absolute;
