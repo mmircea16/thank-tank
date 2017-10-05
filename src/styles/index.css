@@ -1,0 +1,234 @@
+/**
+ * BASE LAYOUT
+ */
+
+body {
+  margin: 0;
+  padding: 15px;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: White;
+  line-height: 1.4;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+/**
+ * TYPOGRAPHY
+ */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+
+  color: white;
+  font-size: inherit;
+
+  background-color: #004262;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+  .btn:hover,
+  .btn:focus {
+    outline: none;
+
+    background-color: #0076af;
+  }
+
+  .btn:active {
+    position: relative;
+    top: 1px;
+  }
+
+  /*LOADER*/
+.loader {
+  width: 4em;
+  height: 4em;
+  margin: 30px auto;
+
+  position: relative;
+
+  font-size: 10px;
+
+  border-top: 0.5em solid #DAEBEE;
+  border-right: 0.5em solid #DAEBEE;
+  border-bottom: 0.5em solid #DAEBEE;
+  border-left: 0.5em solid #004262;
+  border-radius: 50%;
+  animation: load 1s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+h1{
+  font-family: 'Bungee Shade';
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 5.3rem;
+  text-align: center;
+}
+
+.brand {
+  color: #000000;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  width:95%;
+}
+
+.thankCard{
+  display: flex;
+  flex-direction: column;
+}
+
+.thankCard header{
+  font-size: 2.0vw;
+  padding: 0px 2px 0px 2px;
+  display:block;
+}
+
+.autoscrollcomponent{
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.thankCard section{
+  font-size: 1.1vw;
+  height: 100%;
+  overflow: scroll;
+  padding: 0px 4px 0px 4px;
+  display:block;
+  position: absolute;
+  width:auto;
+}
+
+.thankCard footer{
+  text-align: right;
+  font-size: 1.1vw;
+  padding: 0px 2px 0px 2px;
+  display: block;
+}
+
+.banner{
+  width:95%;
+  margin-left: auto;
+  margin-right:auto;
+  position: relative;
+  height:6vw;
+}
+
+.left{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background-image: url('../images/logo-thanktank.jpg');
+  background-repeat: no-repeat;
+  height:6vw;
+  width:30%;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.right{
+  position: absolute;
+  bottom: 0;
+  right:0;
+  text-align: right;
+  background-image: url('../images/lod-logo.jpg');
+  background-repeat: no-repeat;
+  height:6vw;
+  width:32%;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.logo-left{
+  width:55%;
+}
+
+.logo-right{
+  width:55%
+}
+
+.img-bottom{
+  vertical-align: bottom;
+}
+
+.container{
+  position: relative;
+  perspective: 800px; 
+  height:15.8vw; 
+  margin:5px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+  /*border: 1px solid black;*/
+}
+
+.card .thankCard {
+  margin: 0;
+  /*display: block;*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY( 180deg );
+}
+
+.card.flipped {
+  transform: rotateY( 180deg );
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+/* CARD COLOURS */
+.blueCard {
+  background-color: #25BDCF;
+}
+
+.greenCard{
+  background-color: #22AA57;
+}
+
+.pinkCard{
+  background-color: #EF59A1;
+}
+
+.redCard{
+  background-color: #B21E55;
+}
+
+.orangeCard {
+  background-color: #F68E2F;
+}
+
+.purpleCard{
+  background-color: #692468;
+}

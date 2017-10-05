@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThankCard renders correctly if secret is no 1`] = `
+<article
+  className="thankCard testClass"
+>
+  <header>
+    <strong>
+      Thank you 
+      <span
+        className="name"
+      >
+        Thanking to
+        !
+      </span>
+    </strong>
+  </header>
+  <div
+    className="autoscrollcomponent"
+  >
+    <section>
+      message
+    </section>
+  </div>
+  <footer>
+    from 
+    email
+  </footer>
+</article>
+`;
+
+exports[`ThankCard renders correctly if secret is yes 1`] = `
+<article
+  className="thankCard testClass"
+>
+  <header>
+    <strong>
+      Thank you 
+      <span
+        className="name"
+      >
+        Thanking to
+        !
+      </span>
+    </strong>
+  </header>
+  <div
+    className="autoscrollcomponent"
+  >
+    <section>
+      message
+    </section>
+  </div>
+  <footer>
+    from 
+    Anonymous
+  </footer>
+</article>
+`;

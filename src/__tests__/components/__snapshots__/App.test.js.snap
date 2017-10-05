@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render if authenticated and data arrived 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="banner"
+  >
+    <div
+      className="left"
+    />
+    <div
+      className="right"
+    />
+  </div>
+  <div
+    className="cards"
+  >
+    <section
+      className="container"
+    >
+      <div
+        className="card false"
+      >
+        <article
+          className="thankCard front blueCard"
+        >
+          <header>
+            <strong>
+              Thank you 
+              <span
+                className="name"
+              >
+                name
+                !
+              </span>
+            </strong>
+          </header>
+          <div
+            className="autoscrollcomponent"
+          >
+            <section>
+              message
+            </section>
+          </div>
+          <footer>
+            from 
+            thanked By
+          </footer>
+        </article>
+        <article
+          className="thankCard back blueCard"
+        >
+          <header>
+            <strong>
+              Thank you 
+              <span
+                className="name"
+              >
+                dummy
+                !
+              </span>
+            </strong>
+          </header>
+          <div
+            className="autoscrollcomponent"
+          >
+            <section>
+              dummy
+            </section>
+          </div>
+          <footer>
+            from 
+            dummy
+          </footer>
+        </article>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`App render if authenticated and waiting for data 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="banner"
+  >
+    <div
+      className="left"
+    />
+    <div
+      className="right"
+    />
+  </div>
+  <div
+    className="loader"
+  />
+</div>
+`;
+
+exports[`App render if not authenticated 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="banner"
+  >
+    <div
+      className="left"
+    />
+    <div
+      className="right"
+    />
+  </div>
+  <button
+    className="btn"
+    onClick={[Function]}
+  >
+    Connect with Google
+  </button>
+</div>
+`;
