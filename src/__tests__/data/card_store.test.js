@@ -8,14 +8,10 @@ describe("cardStore", () => {
     });
     it('getNext should return with a promise', () => {
 
-        var loadDataPromise = new Promise((resolve, reject) => {
-            resolve([
-                ['time', 'email', 'spreadsheet name', 'message', 'No'],
-                ['time', 'email', 'name', 'message', 'No']]);
-        });
-        var authPromise = new Promise((resolve, reject) => {
-            resolve(true);
-        });
+        var loadDataPromise = Promise.resolve([
+            ['time', 'email', 'spreadsheet name', 'message', 'No'],
+            ['time', 'email', 'name', 'message', 'No']]);
+        var authPromise = Promise.resolve(true);
         checkAuth.mockReturnValueOnce(authPromise);
         loadData.mockReturnValueOnce(loadDataPromise);
 
@@ -26,15 +22,12 @@ describe("cardStore", () => {
     });
 
     it('getNext should resolve the promise with a card when data has arrived', (done) => {
-        var loadDataPromise = new Promise((resolve, reject) => {
-            resolve([
-                ['time', 'fromName', 'spreadsheet name', 'message 1', 'No'],
-                ['time', 'email', 'name', 'message 2', 'Yes']
-            ]);
-        });
-        var authPromise = new Promise((resolve, reject) => {
-            resolve(true);
-        });
+        var loadDataPromise = Promise.resolve([
+            ['time', 'toName', 'spreadsheet name', 'message 1', 'fromName'],
+            ['time', 'email', 'name', 'message 2', '']
+        ]);
+
+        var authPromise = Promise.resolve(true);
         checkAuth.mockReturnValue(authPromise);
         loadData.mockReturnValue(loadDataPromise);
 
@@ -56,9 +49,9 @@ describe("cardStore", () => {
                 expect(card).toBeDefined();
                 expect(card).toEqual(
                     {
-                        name: 'Anonymous',
+                        name: 'name',
                         message: 'message 2',
-                        from: 'email'
+                        from: 'Anonymous'
                     });
                 done();
             });

@@ -11,7 +11,9 @@ export default class FlippingCards extends Component {
         this.state = {
             flipped: false,
             back:{name:'dummy', message:'dummy', from:'dummy'},
-            front:{name:'dummy', message:'dummy', from:'dummy'}
+            front:{name:'dummy', message:'dummy', from:'dummy'},
+                        frontColour: getRandomColour(),
+                        backColour: getRandomColour()
         };
         this.flip = this.flip.bind(this);
         this.getRandomWaitTime = this.getRandomWaitTime.bind(this);
@@ -35,8 +37,6 @@ export default class FlippingCards extends Component {
         this.store.getNext().then((card) => {
             this.setState({ front: card });
         });
-        this.setState({ frontColour: getRandomColour() })
-        this.setState({ backColour: getRandomColour() })
 
         setTimeout(this.flip, this.getRandomWaitTime());
     }
@@ -59,7 +59,6 @@ export default class FlippingCards extends Component {
                         frontColour: getRandomColour(),
                         front: card
                     });
-                    console.log(this.state);
                 });
         }
 
