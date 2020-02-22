@@ -21,7 +21,7 @@ function fetchData() {
                         .then(timeout.bind(null, config.minRefreshRate));
                 });
         });
-        tempPromise.then(() => actualDataPromise = tempPromise);
+        tempPromise.then(() => {actualDataPromise = tempPromise});
         if (!actualDataPromise) actualDataPromise = tempPromise;
         timeout(config.minRefreshRate * 2);
     }
@@ -56,8 +56,7 @@ class CardStore {
             actualDataPromise.then((rows) => {
                 lengthOfData = rows.length;
                 var showIndex = getShowIndex(rows.length);
-                var hasName = rows[showIndex][mapping.secret] !== 'Yes';
-                var from = hasName && rows[showIndex][mapping.from] || 'Anonymous';
+                var from = (rows[showIndex][mapping.from]) || 'Anonymous';
                 resolve({
                     name: rows[showIndex][mapping.name] || '',
                     message: rows[showIndex][mapping.message] || '',

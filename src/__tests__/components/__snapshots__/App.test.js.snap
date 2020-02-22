@@ -58,7 +58,7 @@ exports[`App render if authenticated and data arrived 1`] = `
               <span
                 className="name"
               >
-                dummy
+                 
                 !
               </span>
             </strong>
@@ -67,12 +67,12 @@ exports[`App render if authenticated and data arrived 1`] = `
             className="autoscrollcomponent"
           >
             <section>
-              dummy
+               
             </section>
           </div>
           <footer>
             from 
-            dummy
+             
           </footer>
         </article>
       </div>

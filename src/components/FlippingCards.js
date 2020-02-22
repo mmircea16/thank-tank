@@ -10,8 +10,8 @@ export default class FlippingCards extends Component {
         this.store = getCardStore();
         this.state = {
             flipped: false,
-            back:{name:'dummy', message:'dummy', from:'dummy'},
-            front:{name:'dummy', message:'dummy', from:'dummy'},
+            back:{name:'', message:'', from:''},
+            front:{name:'', message:'', from:''},
                         frontColour: getRandomColour(),
                         backColour: getRandomColour()
         };
