@@ -18,6 +18,7 @@ class App extends Component {
 
     this.onLoad = this.onLoad.bind(this);
     this.onError = this.onError.bind(this);
+    this.updateSigninStatus = this.updateSigninStatus.bind(this);
   }
 
   componentDidMount() {
@@ -27,8 +28,15 @@ class App extends Component {
   /**
    * Check user authenification status and set app state accordingly
    */
-  handleAuth(authResult) {
-    if (authResult && !authResult.error) {
+  handleAuth() {
+    window.gapi.auth2.getAuthInstance().isSignedIn.listen(this.updateSigninStatus)
+    let signedIn = window.gapi.auth2.getAuthInstance().isSignedIn.get();
+    console.log("handleAuth", signedIn)
+    this.updateSigninStatus(signedIn);
+  }
+
+  updateSigninStatus(signedIn) {
+    if (signedIn) {
       this.setState({
         authenticated: true
       });
@@ -106,7 +114,9 @@ class App extends Component {
    */
   authenticate(e) {
     e.preventDefault();
-    checkAuth(false).then(this.handleAuth.bind(this));
+    console.log("authenticate")
+    window.gapi.auth2.getAuthInstance().signIn();
+    // checkAuth(false).then(this.handleAuth.bind(this));
   }
 }
 

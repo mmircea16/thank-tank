@@ -4,12 +4,18 @@ import config from '../config';
  */
 export function checkAuth(immediate) {
   return new Promise((resolve) => {
-    window.gapi.load('client', () => {
-      window.gapi.auth.authorize({
-        'key': config.clientId,
+
+    window.gapi.load('client:auth2', () => {
+      console.log("config", config)
+      window.gapi.client.init({
+        'apiKey': config.apiKey,
+        'clientId': config.clientId,
         'scope': config.scope,
-        'immediate': immediate
-      }, resolve);
+        'discoveryDocs': ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
+      }).then( () => {
+        console.log('resolve');
+        resolve()
+      });
     });
   });
 }
@@ -24,7 +30,6 @@ export function loadData() {
       window.gapi.client.sheets.spreadsheets.values.get({
         spreadsheetId: config.spreadsheetId,
         range: config.range,
-        key: config.clientId
       }).then(
         (response) => {
           resolve(response.result.values || []);
