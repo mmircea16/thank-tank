@@ -60,7 +60,8 @@ class CardStore {
                 resolve({
                     name: rows[showIndex][mapping.name] || '',
                     message: rows[showIndex][mapping.message] || '',
-                    from: from
+                    from: from,
+                    secret:  rows[showIndex][mapping.secret]
                 });
                 lastShown = showIndex > lastShown ? showIndex : lastShown;
             });

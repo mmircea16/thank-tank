@@ -34,11 +34,11 @@ export default class ThankCard extends Component{
     render(){     
         //this.shouldAutoScroll();  
         var row = this.props.row;
-        //var thankedBy = row[4] === 'Yes'? 'Anonymous' : row[1];
+        var thankedBy = row.secret === 'Keep it a secret'? 'Anonymous' : row.from;
         return (<article className={'thankCard ' + this.props.className}>
             <header><strong>Thank you <span className="name">{row.name}!</span></strong></header>
             <ThankText message={row.message} autoScrollEnabled={this.state.autoScroll}/>
-            <footer>from {row.from}</footer>
+            <footer>from {thankedBy}</footer>
         </article>);
     }
 }
