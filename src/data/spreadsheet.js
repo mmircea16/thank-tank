@@ -32,7 +32,7 @@ export function loadData() {
         range: config.range,
       }).then(
         (response) => {
-          resolve(response.result.values || []);
+          resolve(filterEmptyThankees(response.result.values));
         },
         (response) => {
           reject(false, response.result.error);
@@ -44,3 +44,11 @@ export function loadData() {
 
   return promise;
 }
+
+let filterEmptyThankees = function (values) {
+  if (!values) return [];
+
+  console.log(values)
+  console.log(config.mapping.name)
+  return values.filter(row => row[config.mapping.name] && (row[config.mapping.name] !== ''))
+};
