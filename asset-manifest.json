@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/thank-tank/static/css/main.8f220cc4.chunk.css",
+    "main.js": "/thank-tank/static/js/main.5dd7ba95.chunk.js",
+    "main.js.map": "/thank-tank/static/js/main.5dd7ba95.chunk.js.map",
+    "runtime-main.js": "/thank-tank/static/js/runtime-main.a3952116.js",
+    "runtime-main.js.map": "/thank-tank/static/js/runtime-main.a3952116.js.map",
+    "static/js/2.8167a10b.chunk.js": "/thank-tank/static/js/2.8167a10b.chunk.js",
+    "static/js/2.8167a10b.chunk.js.map": "/thank-tank/static/js/2.8167a10b.chunk.js.map",
+    "index.html": "/thank-tank/index.html",
+    "precache-manifest.005b098ba8a336795604644e46599a20.js": "/thank-tank/precache-manifest.005b098ba8a336795604644e46599a20.js",
+    "service-worker.js": "/thank-tank/service-worker.js",
+    "static/css/main.8f220cc4.chunk.css.map": "/thank-tank/static/css/main.8f220cc4.chunk.css.map",
+    "static/js/2.8167a10b.chunk.js.LICENSE.txt": "/thank-tank/static/js/2.8167a10b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/thank-tank/static/media/logo-thanktank.76e06302.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3952116.js",
+    "static/js/2.8167a10b.chunk.js",
+    "static/css/main.8f220cc4.chunk.css",
+    "static/js/main.5dd7ba95.chunk.js"
+  ]
+}
