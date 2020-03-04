@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/thank-tank/static/css/main.8f220cc4.chunk.css",
-    "main.js": "/thank-tank/static/js/main.c469066e.chunk.js",
-    "main.js.map": "/thank-tank/static/js/main.c469066e.chunk.js.map",
+    "main.js": "/thank-tank/static/js/main.54bd8d9e.chunk.js",
+    "main.js.map": "/thank-tank/static/js/main.54bd8d9e.chunk.js.map",
     "runtime-main.js": "/thank-tank/static/js/runtime-main.a3952116.js",
     "runtime-main.js.map": "/thank-tank/static/js/runtime-main.a3952116.js.map",
     "static/js/2.8167a10b.chunk.js": "/thank-tank/static/js/2.8167a10b.chunk.js",
     "static/js/2.8167a10b.chunk.js.map": "/thank-tank/static/js/2.8167a10b.chunk.js.map",
     "index.html": "/thank-tank/index.html",
-    "precache-manifest.690815d5077b4962d6f3c76cd6044d9d.js": "/thank-tank/precache-manifest.690815d5077b4962d6f3c76cd6044d9d.js",
+    "precache-manifest.89210f46e4320e4a80b2ddfd7d61ca69.js": "/thank-tank/precache-manifest.89210f46e4320e4a80b2ddfd7d61ca69.js",
     "service-worker.js": "/thank-tank/service-worker.js",
     "static/css/main.8f220cc4.chunk.css.map": "/thank-tank/static/css/main.8f220cc4.chunk.css.map",
     "static/js/2.8167a10b.chunk.js.LICENSE.txt": "/thank-tank/static/js/2.8167a10b.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.a3952116.js",
     "static/js/2.8167a10b.chunk.js",
     "static/css/main.8f220cc4.chunk.css",
-    "static/js/main.c469066e.chunk.js"
+    "static/js/main.54bd8d9e.chunk.js"
   ]
 }
