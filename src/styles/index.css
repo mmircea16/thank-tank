@@ -204,6 +204,10 @@ h1{
   transform: rotateY( 180deg );
 }
 
+.flipped .front .thankText {
+  display: none;
+}
+
 ::-webkit-scrollbar { 
   display: none; 
 }
