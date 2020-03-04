@@ -27,12 +27,14 @@ export function checkAuth(immediate) {
 export function loadData() {
   var promise = new Promise((resolve, reject) => {
     window.gapi.client.load('sheets', 'v4', () => {
-      window.gapi.client.sheets.spreadsheets.values.get({
+      window.gapi.client.sheets.spreadsheets.values.batchGet({
         spreadsheetId: config.spreadsheetId,
-        range: config.range,
+        ranges: config.ranges,
       }).then(
         (response) => {
-          resolve(filterEmptyThankees(response.result.values));
+          let allRanges = response.result.valueRanges;
+          let allThanks = allRanges.flatMap(range => range.values);
+          resolve(filterEmptyThankees(allThanks));
         },
         (response) => {
           reject(false, response.result.error);
@@ -48,7 +50,5 @@ export function loadData() {
 let filterEmptyThankees = function (values) {
   if (!values) return [];
 
-  console.log(values)
-  console.log(config.mapping.name)
   return values.filter(row => row[config.mapping.name] && (row[config.mapping.name] !== ''))
 };

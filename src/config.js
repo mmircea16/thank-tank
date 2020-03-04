@@ -7,7 +7,7 @@ export default {
     speedUpperBound: 35, //upper bound for flip randomisation
     gridSize: 12, //grid size for the cards
     timePerWord: 0.1, //to work out how long to show a message
-    range: 'A2:E', //range for the data columns in the spreadsheet
+    ranges: ['A2:F', 'Form Responses 1!A2:F'], //range for the data columns in the spreadsheet
     mapping: {
         //data mapping columns from spreadsheet
         name: 3,
