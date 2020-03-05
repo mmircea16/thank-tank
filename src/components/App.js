@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    checkAuth(true).then(this.handleAuth.bind(this));
+    checkAuth().then(this.handleAuth.bind(this));
   }
 
   /**
