@@ -1,5 +1,4 @@
 export default {
-    apiKey: 'AIzaSyC4UvL_Yjq8Tef22E7Rj-HDafrxzRY4Iis', //google api key
     clientId: '302154217901-42dk7gumote0945geu0bq6vpotaa4qqu.apps.googleusercontent.com', //google client ID
     scope: 'https://www.googleapis.com/auth/spreadsheets',
     spreadsheetId: '17lpXtlODcFYHK5kdDSpuO0sXimVwUrzQMbEnMVj8h0c', //ID for the spreadsheet
