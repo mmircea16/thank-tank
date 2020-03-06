@@ -8,6 +8,7 @@ export function checkAuth(immediate) {
     window.gapi.load('client:auth2', () => {
       console.log("config", config)
       window.gapi.client.init({
+        'apiKey': config.apiKey,
         'clientId': config.clientId,
         'scope': config.scope,
         'discoveryDocs': ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
