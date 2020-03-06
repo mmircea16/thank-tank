@@ -14,7 +14,7 @@ function fetchData() {
 
         isPending = true;
         var tempPromise = new Promise((resolve) => {
-            checkAuth()
+            checkAuth(true)
                 .then((authResult) => {
                     loadData()
                         .then(resolve)

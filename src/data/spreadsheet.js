@@ -2,14 +2,19 @@ import config from '../config';
 /**
  * Get the user authentication status
  */
-export function checkAuth() {
+export function checkAuth(immediate) {
   return new Promise((resolve) => {
+
     window.gapi.load('client:auth2', () => {
+      console.log("config", config)
       window.gapi.client.init({
         'clientId': config.clientId,
         'scope': config.scope,
         'discoveryDocs': ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
-      }).then(resolve);
+      }).then( () => {
+        console.log('resolve');
+        resolve()
+      });
     });
   });
 }
