@@ -84,7 +84,7 @@ h1{
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   margin-right: auto;
@@ -98,9 +98,9 @@ h1{
 }
 
 .thankCard header{
-  font-size: 7vw;
-  padding: 1vw 3vw 3vw 3vw;
-  display: block;
+  font-size: 2.0vw;
+  padding: 0px 2px 0px 2px;
+  display:block;
 }
 
 .autoscrollcomponent{
@@ -110,28 +110,27 @@ h1{
 }
 
 .thankCard section{
-  font-size: 4vw;
+  font-size: 1.1vw;
   height: 100%;
   overflow: hidden;
-  padding: 0 3vw 0 3vw;
-  display: block;
+  padding: 0px 4px 0px 4px;
+  display:block;
   position: absolute;
-  width: auto;
+  width:auto;
 }
 
 .thankCard footer{
   text-align: right;
-  font-size: 5vw;
-  padding: 0 3vw 3vw 3vw;
+  font-size: 1.1vw;
+  padding: 0px 2px 0px 2px;
   display: block;
 }
 
 .banner{
   width:95%;
-  margin-left: -1vw;
+  margin-left: auto;
   margin-right:auto;
   position: relative;
-  margin-bottom: 3vw;
   height:6vw;
 }
 
@@ -142,7 +141,7 @@ h1{
   background-image: url('../images/logo-thanktank.jpg');
   background-repeat: no-repeat;
   height:6vw;
-  width:50%;
+  width:30%;
   background-size: contain;
   background-position: bottom;
 }
@@ -155,7 +154,7 @@ h1{
   background-image: url('../images/lod-logo.jpg');
   background-repeat: no-repeat;
   height:6vw;
-  width:50%;
+  width:32%;
   background-size: contain;
   background-position: bottom;
 }
@@ -175,7 +174,7 @@ h1{
 .container{
   position: relative;
   perspective: 800px; 
-  height:60vw;
+  height:15.8vw; 
   margin:5px;
 }
 
